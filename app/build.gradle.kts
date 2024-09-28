@@ -6,7 +6,11 @@ plugins {
 android {
     namespace = "apps.infinitylearn.myapplication"
     compileSdk = 34
-
+//    allprojects {
+//        repositories {
+//            maven { url = uri("https://jitpack.io") }
+//        }
+//    }
     defaultConfig {
         applicationId = "apps.infinitylearn.myapplication"
         minSdk = 24
