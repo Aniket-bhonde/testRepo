@@ -11,6 +11,9 @@ android {
 //            maven { url = uri("https://jitpack.io") }
 //        }
 //    }
+//    repositories {
+//        maven { url = uri("https://jitpack.io") } // Remove this block from the build.gradle.kts file
+//    }
     defaultConfig {
         applicationId = "apps.infinitylearn.myapplication"
         minSdk = 24
@@ -46,6 +49,7 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+    implementation(project(":mylibrary"))
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
