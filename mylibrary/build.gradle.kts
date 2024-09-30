@@ -47,16 +47,32 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
 }
 
-publishing {
-    publications {
-        register<MavenPublication>("release") {
-            groupId = "com.github.Aniket-bhonde"
-            artifactId = "mylibrary"
-            version = "1.0"
+afterEvaluate {
+    publishing{
+        publications{
+            register<MavenPublication>("release") {
+                groupId = "com.github.Aniket-bhonde"
+                artifactId = "mylibrary"
+                version = "1.0"
 
-            afterEvaluate {
-                from(components["release"])
+                afterEvaluate {
+                    from(components["release"])
+                }
             }
         }
     }
 }
+
+//publishing {
+//    publications {
+//        register<MavenPublication>("release") {
+//            groupId = "com.github.Aniket-bhonde"
+//            artifactId = "mylibrary"
+//            version = "1.0"
+//
+//            afterEvaluate {
+//                from(components["release"])
+//            }
+//        }
+//    }
+//}
